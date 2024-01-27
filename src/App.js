@@ -1,8 +1,6 @@
-
-
 import React from 'react';
 import { connect } from 'react-redux';
-import { startTimer, pauseTimer, resetTimer } from './redux/actions';
+import { startTimer, pauseTimer, resetTimer, stopTimer, continueTimer, doneTimer } from './redux/actions';
 
 class App extends React.Component {
   componentDidMount() {
@@ -32,6 +30,18 @@ class App extends React.Component {
       dispatch(resetTimer());
     };
 
+    const stop = () => {
+      dispatch(stopTimer());
+    };
+
+    const continueTimer = () => {
+      dispatch(continueTimer());
+    };
+
+    const done = () => {
+      dispatch(doneTimer());
+    };
+
     return (
       <div>
         <div>Duration: {duration} minutes</div>
@@ -45,6 +55,9 @@ class App extends React.Component {
           Pause
         </button>
         <button onClick={reset}>Reset</button>
+        <button onClick={stop}>Stop</button>
+        <button onClick={continueTimer}>Continue</button>
+        <button onClick={done}>Done</button>
       </div>
     );
   }
