@@ -1,36 +1,15 @@
 export const startTimer = () => {
-    return {
-      type: 'START_TIMER',
-    };
-  };
-
-  export const stopTimer = () => {
-    return {
-      type: 'STOP_TIMER',
-    };
+    // Action creator for starting the timer
   };
   
   export const pauseTimer = () => {
-    return {
-      type: 'PAUSE_TIMER',
-    };
-  };
-
-  export const continueTimer = () => {
-    return {
-      type: 'CONTINUE_TIMER',
-    };
+    // Action creator for pausing the timer
   };
   
   export const resetTimer = () => {
-    return {
-      type: 'RESET_TIMER',
-    };
+    // Action creator for resetting the timer
   };
-
-  export const doneTimer = () => {
-    return {
-      type: 'DONE_TIMER',
-    };
+  
+  export const addTask = (task) => {
+    // Action creator for adding a task
   };
-

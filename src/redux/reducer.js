@@ -1,61 +1,14 @@
+
 const initialState = {
-    duration: 25,
-    timeRemaining: 1500,
-    isRunning: false,
+    // Initial state for the task list
   };
   
-  const reducer = (state = initialState, action) => {
+  const taskReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'START_TIMER':
-            return {
-              ...state,
-              isWork: true,
-              isPause: false,
-              isRest: false,
-            };
-          
-          case 'STOP_TIMER':
-            return {
-              ...state,
-              isWork: false,
-              isPause: false,
-              isRest: false,
-              seconds: 0,
-            };
-          
-          case 'PAUSE_TIMER':
-            return {
-              ...state,
-              isPause: true,
-            };
-          
-          case 'CONTINUE_TIMER':
-            return {
-              ...state,
-              isPause: false,
-            };
-          
-          case 'RESET_TIMER':
-            return {
-              ...state,
-              isWork: false,
-              isPause: false,
-              isRest: false,
-              seconds: 0,
-            };
-          
-          case 'DONE_TIMER':
-            return {
-              ...state,
-              isWork: false,
-              isPause: false,
-              isRest: false,
-              seconds: 0,
-              tomato: state.tomato + 1,
-            };
+      // Handle different action types here
       default:
-        return state;
+        return state; // Return the current state for unknown actions
     }
   };
   
-  export default reducer;
+  export default taskReducer;
