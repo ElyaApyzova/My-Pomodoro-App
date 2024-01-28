@@ -1,15 +1,27 @@
+
+
+
 export const startTimer = () => {
-    // Action creator for starting the timer
+    return {
+      type: "START_TIMER"
+    }
   };
   
   export const pauseTimer = () => {
-    // Action creator for pausing the timer
+    return {
+      type: "PAUSE_TIMER"
+    }
   };
   
   export const resetTimer = () => {
-    // Action creator for resetting the timer
+    return {
+      type: "RESET_TIMER"
+    }
   };
   
   export const addTask = (task) => {
-    // Action creator for adding a task
+    return {
+      type: "ADD_TASK",
+      payload: {task},
+    }
   };
