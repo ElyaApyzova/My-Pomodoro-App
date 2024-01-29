@@ -6,8 +6,12 @@ class TaskList extends React.Component {
   // TaskList component implementation
 }
 
-const mapStateToProps = (state) => ({
-  // Map state properties from Redux store
+const mapStateToProps = state => ({
+  tasks: state.tasks,
 });
 
-export default connect(mapStateToProps, { addTask })(TaskList);
+const mapDispatchToProps = dispatch => ({
+  addTask: task => dispatch(addTask(task)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TaskList)

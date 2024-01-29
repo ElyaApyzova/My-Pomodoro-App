@@ -6,8 +6,14 @@ class Timer extends React.Component {
   // Timer component implementation
 }
 
-const mapStateToProps = (state) => ({
-  // Map state properties from Redux store
+const mapStateToProps = state => ({
+  timer: state.timer,
 });
 
-export default connect(mapStateToProps, { startTimer, pauseTimer, resetTimer })(Timer);
+const mapDispatchToProps = dispatch => ({
+  startTimer: () => dispatch(startTimer()),
+  pauseTimer: () => dispatch(pauseTimer()),
+  resetTimer: () => dispatch(resetTimer()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Timer);
