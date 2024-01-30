@@ -1,19 +1,15 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { startTimer, pauseTimer, resetTimer } from '../../redux/actions';
+import React, { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-class Timer extends React.Component {
-  // Timer component implementation
+
+const getFormattedTime = (seconds) => {
+    return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
 }
 
-const mapStateToProps = state => ({
-  timer: state.timer,
-});
+export const Timer = () => {
 
-const mapDispatchToProps = dispatch => ({
-  startTimer: () => dispatch(startTimer()),
-  pauseTimer: () => dispatch(pauseTimer()),
-  resetTimer: () => dispatch(resetTimer()),
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Timer);
+    const globalState = useSelector(state => state);
+    const dispatch = useDispatch();
+    const ref = useRef(null);
+}
