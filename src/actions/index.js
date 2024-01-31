@@ -19,7 +19,7 @@ export const setBreak = (number) => {
     }
 };
 
-export const setSeconds = (number) => {
+export const setTimer = (number) => {
     return {
         type: 'SECONDS',
         payload: number

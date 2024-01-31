@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { breakReducer, activeReducer, modeReducer, timerReducer, sessionReducer } from './reducers';
 
 const rootReducer = combineReducers({
-    break: breakReducer,
+    isBreak: breakReducer,
     active: activeReducer,
     mode: modeReducer,
     timer: timerReducer,
