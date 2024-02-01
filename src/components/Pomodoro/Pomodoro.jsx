@@ -10,7 +10,8 @@ const Pomodoro = () => {
             <div className="wrapper">
                 <div className="container">
                     <h1 className="pomodoro-title">Pomodoro Tracker</h1>
-                    <Controller />
+                    <Controller  mode="break"/>
+                    <Controller  mode="session"/>
                     <Timer />
                 </div>
             </div>
