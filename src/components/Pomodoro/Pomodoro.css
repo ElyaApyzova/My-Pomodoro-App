@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -12,19 +14,27 @@ body{
 .wrapper {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: brown;
 }
 
 
 .container{ 
     margin: 0 auto;
-    width: 500px;
+    width: 430px;
     padding: 2rem;
     background-color: bisque;
     box-shadow: 0 0 100px 20px rgba(0, 0, 0, .7), 0 0 45px 50px inset blue, 15px 15px 5px 10px;
     border-radius: 50%;
 }
+
+.pomodoro-title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 40px;
+    color: brown;
+}
+
 
 .react-icons {
     vertical-align: middle;
@@ -42,24 +52,33 @@ body{
 .pomodoro-btn{
     background: bisque;
     border: 2px dotted brown;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 50%;
-    font-size: 1em;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
 .btn-level{
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.1em;
 }
 
-.length-control {
-    width: 50%;
-    display: inline-block;
+.control-box{
+  width: 50%;
+  display: inline-block;
+  margin: 25px 0px;
+}
+
+.timer-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 #time-left{
-    font-size: 2em;
+    margin: 15px 0px;
+    font-size: 1.8em;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -81,5 +100,6 @@ body{
 
 #break-length,
 #session-length {
-    width: 1.1em;
+    width: 1.6em;
+    margin-top: 20px;
 }

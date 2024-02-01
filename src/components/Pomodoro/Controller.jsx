@@ -40,8 +40,11 @@ export const Controller =(props) => {
         <div className="control-box">
             <div id={props.mode + '-label'}>{props.mode} length</div>
             <button id={props.mode + '-increment'} className="btn-level pomodoro-btn" value="+" onClick={() => Setter(props.mode + 'Length', 1)}><IoMdArrowRoundUp /></button>
+            
             <div id={props.mode + "-length"} className="btn-level">{currentValue}</div>
+            
             <button id={props.mode + "-decrement"} className="btn-level pomodoro-btn" value="-" onClick={() => Setter(props.mode + 'Length', -1)}><IoMdArrowRoundDown /></button>
+            
         </div>
     )
 }

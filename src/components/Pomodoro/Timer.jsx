@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { IoIosPlay, IoMdPause, IoIosRefresh } from 'react-icons/io';
 import { useDispatch, useSelector } from "react-redux";
-import { enable, disable, reset, setTimer, modeSession, modeBreak, setSession, setBreak } from '../../actions/index'
+import { enable, disable, reset, setTimer, modeSession } from '../../actions/index'
 
 const getFormattedTime = (seconds) => {
     return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
@@ -49,7 +49,7 @@ const Timer = () => {
                 </div>
             </div>
             <div className="timer-control">
-                <button id="start" className="pomodoro-btn" onClick={toggleTimer}>{state.active ? <IoMdPause /> : <IoIosPlay />}</button>
+                <button id="start_stop" className="pomodoro-btn" onClick={toggleTimer}>{state.active ? <IoMdPause /> : <IoIosPlay />}</button>
                 <button id="reset" className="pomodoro-btn" onClick={resetDefault}><IoIosRefresh /></button>
             </div>
             <audio ref={audioRef} id="beep" preload="auto" src="/beep.mp3"></audio>
