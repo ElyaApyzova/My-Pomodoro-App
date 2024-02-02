@@ -1,106 +1,107 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    margin: 0;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
 }
 
 .wrapper {
   display: flex;
   align-items: center;
   height: 100vh;
-  background-color: brown;
+  background-color: #b3ffae;
 }
 
-
-.container{ 
-    margin: 0 auto;
-    width: 480px;
-    padding: 2rem;
-    background-color: bisque;
-    box-shadow: 0 0 100px 20px rgba(0, 0, 0, .7), 0 0 45px 50px inset blue, 15px 15px 5px 10px;
-    border-radius: 50%;
+.container {
+  margin: 0 auto;
+  width: 480px;
+  padding: 2rem;
+  background-color: #f8ffdb;
+  box-shadow: 0 0 100px 20px rgba(245, 132, 132, 0.5),
+    0 0 35px 40px inset #ff6464;
+  border-radius: 50%;
+  border: 3px dotted #ff6464;
 }
 
-.pomodoro-title{
-    font-size: 30px;
-    font-weight: 700;
-    margin-top: 40px;
-    color: brown;
+.pomodoro-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 40px;
+  color: #FF6464;
 }
-
 
 .react-icons {
-    vertical-align: middle;
-    transition: transform .3s ease-out;
+  vertical-align: middle;
+  transition: transform 0.3s ease-out;
+  color: #FF6464;
 }
 
-.react-icons:hover{
-    transform: scale(1.2);
+.react-icons:hover {
+  transform: scale(1.2);
 }
 
-.react-icons:active{
-    color: brown;
+.react-icons:active {
+  color: #F8FFDB;
 }
 
-.pomodoro-btn{
-    background: bisque;
-    border: 2px dotted brown;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 1.1em;
-    cursor: pointer;
+.pomodoro-btn {
+  background: #b3ffae;
+  border: 2px dotted #ff6464;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 1.1em;
+  cursor: pointer;
 }
 
-.btn-level{
-    display: inline-block;
-    font-size: 1.1em;
+.btn-level {
+  display: inline-block;
+  font-size: 1.1em;
 }
 
-.control-box{
+.control-box {
   width: 50%;
   display: inline-block;
   margin: 25px 0px;
 }
 
-.timer-control{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
+.timer-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
-#time-left{
-    margin: 15px 0px;
-    font-size: 1.8em;
-    font-family: 'Poppins', sans-serif;
+#time-left {
+  margin: 15px 0px;
+  font-size: 1.8em;
+  font-family: "Poppins", sans-serif;
 }
 
-.animated{
-    animation: pulse .5s .4s ease-out infinite alternate;
+.animated {
+  animation: pulse 0.5s 0.4s ease-out infinite alternate;
 }
 
 @keyframes pulse {
-    0%,
-    80% {
-        transform: scale(1);
-    }
+  0%,
+  80% {
+    transform: scale(1);
+  }
 
-    100% {
-        transform: scale(.8);
-        color: blue;
-    }
+  100% {
+    transform: scale(0.8);
+    color: #ff6464;
+  }
 }
 
 #break-length,
 #session-length {
-    width: 1.6em;
-    margin-top: 30px;
+  width: 1.6em;
+  margin-top: 30px;
 }
