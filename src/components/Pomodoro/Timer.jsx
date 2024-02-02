@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { IoIosPlay, IoMdPause, IoIosRefresh } from 'react-icons/io';
 import { useDispatch, useSelector } from "react-redux";
-import { enable, disable, reset, setTimer, modeSession } from '../../actions/index'
+import { enable, disable, reset, setTimer, modeSession, modeBreak } from '../../actions/index'
+import audio from './signal.wav'
 
 const getFormattedTime = (seconds) => {
     return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
@@ -22,7 +23,10 @@ const Timer = () => {
             audioRef.current.currentTime = 0;
             audioRef.current.play();
 
-            if (!state.break) {
+            if (!state.modes) {
+                dispatch(setTimer(state.isBreak * 60));
+                dispatch(modeBreak());
+            } else {
                 dispatch(setTimer(state.session * 60));
                 dispatch(modeSession());
             }
@@ -44,7 +48,7 @@ const Timer = () => {
         <>
             <div className="timer">
                 <div className="timer-wrapper">
-                    <div id="timer-label">{state.break ? 'Break' : 'Session'}</div>
+                    <div id="timer-label">{state.modes ? 'Break' : 'Session'}</div>
                     <div id="time-left" className={state.active ? "animated" : null}>{getFormattedTime(state.timer)}</div>
                 </div>
             </div>
@@ -52,7 +56,7 @@ const Timer = () => {
                 <button id="start_stop" className="pomodoro-btn" onClick={toggleTimer}>{state.active ? <IoMdPause /> : <IoIosPlay />}</button>
                 <button id="reset" className="pomodoro-btn" onClick={resetDefault}><IoIosRefresh /></button>
             </div>
-            <audio ref={audioRef} id="beep" preload="auto" src="/beep.mp3"></audio>
+            <audio ref={audioRef} id="beep" preload="auto" src={audio}></audio>
         </>
     )
 }

@@ -8,7 +8,7 @@ export const Controller =(props) => {
 
 
     const active = useSelector(state => state.active);
-    const mode = useSelector(state => state.mode);
+    const modes = useSelector(state => state.modes);
     const isBreak = useSelector(state => state.isBreak);
     const session = useSelector(state => state.session);
     const dispatch = useDispatch();
@@ -22,7 +22,7 @@ export const Controller =(props) => {
              if (newValue >= 1 && newValue <= 60) {
                
                 
-            if ((mode && props.mode === 'break') || (!mode && props.mode === 'session')) {
+            if ((modes && props.mode === 'break') || (!modes && props.mode === 'session')) {
                 dispatch(setTimer(newValue * 60));
             }
 
