@@ -33,7 +33,7 @@ body {
 }
 
 .pomodoro-title {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   margin-top: 45px;
   color: #FF6464;
@@ -114,7 +114,7 @@ body {
 @media(max-width:540px) {
   
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
   .container {
     width: 420px;
@@ -123,8 +123,8 @@ body {
   }
   
   .pomodoro-title {
-    font-size: 24px;
-    margin-top: 30px;
+    font-size: 26px;
+    margin-top: 40px;
    
   }
 }
@@ -141,7 +141,7 @@ body {
   }
   
   .pomodoro-title {
-    font-size: 22px;
+    font-size: 24px;
    
   }
 
@@ -152,23 +152,22 @@ body {
 
 @media(max-width:420px) {
   
-  body {
-    font-size: 13px;
-  }
+  
   .container {
     margin: 0 auto;
     width: 360px;
     height: 360px;
-    
+    box-shadow: 0 0 100px 20px rgba(245, 132, 132, 0.5),
+    0 0 28px 30px inset #ff6464;
   }
   
   .pomodoro-title {
-    font-size: 20px;
-    margin-top: 25px;
+    font-size: 22px;
+    margin-top: 35px;
   }
 
   .control-box {
-    margin: 20px 0px;
+    margin: 22px 0px;
   }
   
   .timer-control {
@@ -191,7 +190,7 @@ body {
 @media(max-width:380px) {
   
   body {
-    font-size: 12px;
+    font-size: 13px;
   }
   .container {
     width: 300px;
@@ -202,7 +201,7 @@ body {
   }
   
   .pomodoro-title {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 4px;
   }
 
@@ -211,7 +210,7 @@ body {
   }
 
   .control-box {
-    margin: 14px 0px;
+    margin: 16px 0px;
   }
   
   .timer-control {
@@ -219,7 +218,7 @@ body {
   }
   
   #time-left {
-    margin: 10px 0px;
+    margin: 12px 0px;
 
   }
   
@@ -233,16 +232,18 @@ body {
 @media(max-width:310px) {
   
   body {
-    font-size: 10px;
+    font-size: 11px;
   }
   .container {
     width: 250px;
     height: 250px;
-   
+    box-shadow: 0 0 100px 20px rgba(245, 132, 132, 0.5),
+    0 0 18px 24px inset #ff6464;
   }
   
   .pomodoro-title {
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 30px;
   }
 
   .pomodoro-btn {
@@ -250,7 +251,7 @@ body {
   }
 
   .control-box {
-    margin: 10px 0px;
+    margin: 11px 0px;
   }
   
   .timer-control {
@@ -258,13 +259,13 @@ body {
   }
   
   #time-left {
-    margin: 8px 0px;
+    margin: 10px 0px;
 
   }
   
   #break-length,
 #session-length {
-  margin-top: 15px;
+  margin-top: 17px;
 }
   
 }
@@ -273,7 +274,7 @@ body {
 @media(max-width:270px) {
   
   body {
-    font-size: 8px;
+    font-size: 9px;
   }
   .container {
     width: 200px;
@@ -283,25 +284,27 @@ body {
   }
   
   .pomodoro-title {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 20px;
   }
 
-  
+  .pomodoro-btn {
+    padding: 2px 5px;
+  }
 
   .control-box {
-    margin: 8px 0px;
+    margin: 10px 0px;
   }
   
   
   #time-left {
-    margin: 5px 0px;
+    margin: 6px 0px;
 
   }
   
   #break-length,
 #session-length {
-  margin-top: 12px;
+  margin-top: 14px;
 }
   
 }
